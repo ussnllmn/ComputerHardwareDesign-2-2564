@@ -82,14 +82,14 @@ void Pattern_text(){
 }
 
 void Pattern_fade(){
-  // fade in from min to max in increments of 2 points:
+  // fade in from min to max in increments of 1 points:
   for (float fadeValue = 0 ; fadeValue <= 20; fadeValue += 1) {
     Pattern_on_off(strip.Color(0, 0, fadeValue));
 //    Serial.println(fadeValue);
     delay(50);
   }
 
-  // fade out from max to min in increments of 2 points:
+  // fade out from max to min in decrement of 1 points:
   for (float fadeValue = 20 ; fadeValue >= 0; fadeValue -= 1) {
     Pattern_on_off(strip.Color(0, 0, fadeValue));
 //    Serial.println(fadeValue);
